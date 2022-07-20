@@ -1,0 +1,14 @@
+universe = vanilla
+transfer_input_files = $(fwd_read), $(rev_read), BacFilt_wrapper.sh, BacFilt.R, R_libs.tar.gz, my_R.tar.gz
+executable = BacFilt_wrapper.sh
+output = $(seq_dir)/job.out
+error = $(seq_dir)/job.err
+log = $(seq_dir)/job.log
+
+request_cpus = 1
+request_memory = 8GB
+request_disk = 4GB
+
+requirements = OSGVO_OS_STRING == "RHEL 7" && Arch == "X86_64" && HAS_MODULES == True
+
+queue seq_dir,fwd_read,rev_read from seq_dirs.txt
