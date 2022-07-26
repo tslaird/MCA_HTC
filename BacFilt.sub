@@ -1,10 +1,12 @@
 universe = vanilla
-transfer_input_files = $(fwd_read), $(rev_read), BacFilt_wrapper.sh, BacFilt.R, R_libs.tar.gz, my_R.tar.gz
-executable = BacFilt_wrapper.sh
-output = $(seq_dir)/job.out
-error = $(seq_dir)/job.err
-log = $(seq_dir)/job.log
+initial_dir = $(seq_dir)
+transfer_input_files = $(fwd_read), $(rev_read), /home/tslaird/microbial_community_test/BacFilt_wrapper.sh, /home/tslaird/microbial_community_test/BacFilt.R, /home/tslaird/microbial_community_test/R_libs.tar.gz, /home/tslaird/microbial_community_test/my_R.tar.gz
+executable = /home/tslaird/microbial_community_test/BacFilt_wrapper.sh
+output = $BacFilt.out
+error = $BacFilt.err
+log = $BacFilt.log
 
+#transfer_output_files = $(seq_dir)/
 should_transfer_files = YES
 when_to_transfer_output = ON_EXIT
 
