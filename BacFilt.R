@@ -16,7 +16,7 @@ if(length(fastqFs) != length(fastqRs)) stop("Forward and reverse files do not ma
 #              rev=file.path(pathR, fastqRs), filt.rev=file.path(filtpathR, fastqRs),
 #              truncLen=c(240,200), maxEE=2, truncQ=11, maxN=0, rm.phix=TRUE,
 #              compress=TRUE, verbose=TRUE, multithread=TRUE)
-filterAndTrim(fwd='F3D0_S188_L001_R1_001.fastq', filt='F3D0_S188_L001_R1_001.filtered.fastq',
-              rev='F3D0_S188_L001_R2_001.fastq', filt.rev='F3D0_S188_L001_R2_001.filtered.fastq',
+filterAndTrim(fwd=pathF, filt=paste0(pathF,".filtered"),
+              rev=pathR, filt.rev=paste0(pathR,".filtered"),
               truncLen=c(240,200), maxEE=2, truncQ=11, maxN=0, rm.phix=TRUE,
               compress=TRUE, verbose=TRUE, multithread=FALSE)
