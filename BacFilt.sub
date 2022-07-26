@@ -5,6 +5,9 @@ output = $(seq_dir)/job.out
 error = $(seq_dir)/job.err
 log = $(seq_dir)/job.log
 
+should_transfer_files = YES
+when_to_transfer_output = ON_EXIT
+
 request_cpus = 1
 request_memory = 8GB
 request_disk = 4GB
